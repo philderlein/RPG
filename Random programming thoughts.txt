@@ -1,0 +1,51 @@
+Random Thoughts about how to code this shit:
+
+Players in array? [0], [1], [2], [3]
+
+Enemies have target variable, tells the enemy which guy to hit.
+
+Start of Battle:
+Battle 1:
+	
+	-Randomize enemy, set target to 1
+	-Put enemy in proper place
+Battle 2:
+	-Randomize enemy, set target to 2
+	-Put enemy in proper place
+Battle 3:
+	-Randomize enemy, set target to 3
+	-Put enemy in proper place
+Battle 4:
+	-Randomize enemy, set target to 4
+	-Put enemy in proper place
+Start Battle.
+Enemies placed in array?
+
+Enemy attacks work on hit player [target], calculate damage, send damage forward up the array.
+
+Logic for turn flow:
+-Turn set to 1
+-Choose action
+-action calls method
+	-Attack calls method to choose who to attack
+		-calls method that actually attacks
+	-Items opens item menu
+		-Clicking on item calls item-specific method
+			-choose target?
+				-Item goes off
+-Turn set to 2
+	-same shit
+
+-all player turns done
+Enemies have multiple attacks
+Enemies randomize which attack they call
+Enemies call their attack methods sequentially in the array
+	-Only 1 attack per enemy though
+
+Enemies attack method calculates based on target in array
+	-stores damage dealt and deals it up the array
+	-Or store damage and call method of dealing damage to the rest of the selves. Some go backward, some go forward?
+
+End of Battle:
+Calculate XP and shit by calling the enemy array and iterating through adding XP and shit together.
+
