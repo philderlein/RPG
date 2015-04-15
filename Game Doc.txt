@@ -15,7 +15,7 @@ Sequential Battles Simultaneously RPG
 		-Items
 		-Dead actions (while dead)
 			-Give Up (Quick Game Over)
-			-DonÅft Give Up (skips turn, youÅfre dead ya know)
+			-Don't Give Up (skips turn, you're dead ya know)
 
 -Player has no maximum HP, only default HP
 	-This simplifies time shenanigans with trying to calculate if a future self would be healed or not
@@ -37,9 +37,9 @@ Sequential Battles Simultaneously RPG
 		-Damage to future self, which carries over into the past?
 
 -What happens if one of your selves die?
-	-Every turn heÅfs dead, the enemies chew on him, dealing extra damage
+	-Every turn he's dead, the enemies chew on him, dealing extra damage
 		-Revive him fast by healing in the past, or the negative HP may be too much to overcome
-		-That self doesnÅft get his turns back, he was still chewed on all those turns he was ÅgdeadÅh
+		-That self doesn't get his turns back, he was still chewed on all those turns he was "dead"
 
 -What happens if one of the battles ends early?
 	-Extra looting time meaning more rewards?
@@ -49,10 +49,10 @@ Sequential Battles Simultaneously RPG
 	-All 4 battles are the same battle, just at different points in time
 	-Boss has same rules as you, damage in the past carries to the future parts
 	-To win, must repel/kill boss in every battle
-	-Time shenanigans like destroying the BossÅfs sword to remove the damage it dealt in the future(effectively healing your future selves)
-	?If boss isnÅft repelled/killed fast enough in a battle, bad things(village ruined, miss out on items, etc)?
+	-Time shenanigans like destroying the Boss's sword to remove the damage it dealt in the future(effectively healing your future selves)
+	?If boss isn't repelled/killed fast enough in a battle, bad things(village ruined, miss out on items, etc)?
 
 -Game Over if:
 	-All selves are killed
-	-All currently engaged enemies (meaning battles in which your self is still alive) are dead while one of your selves are dead (Basically if you canÅft do anything to revive a self, you lose)
-	-You choose ÅgGive UpÅh from a dead self
+	-All currently engaged enemies (meaning battles in which your self is still alive) are dead while one of your selves are dead (Basically if you can't do anything to revive a self, you lose)
+	-You choose "Give Up" from a dead self
