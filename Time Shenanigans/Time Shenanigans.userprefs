@@ -1,12 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\Turn_Handler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\General Scripts\Player.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\Player_Parent.cs" Line="52" Column="3" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" Line="4" Column="2" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\Actor.cs" Line="24" Column="18" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\Player.cs" Line="32" Column="23" />
-      <File FileName="Assets\Standard Assets\Scripts\General Scripts\Turn_Handler.cs" Line="28" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\Player.cs" Line="31" Column="24" />
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\Player_Parent.cs" Line="29" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

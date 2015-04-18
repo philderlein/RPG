@@ -19,14 +19,14 @@ public class Player_Parent : MonoBehaviour {
 	//deals damage to future selves
 	public void DealFutureDamage (int target, int damage) {
 		for (; target < plyrArray.Length; target++) {
-			plyrArray [target].BroadcastMessage("Damage", damage);
+			plyrArray [target].SendMessage("Damage", damage);
 		}
 	}
 
 	//Deals damage to past selves
 	public void DealPastDamage (int target, int damage) {
 		for (; target < plyrArray.Length; target++) {
-			plyrArray [target].BroadcastMessage("Damage", damage);
+			plyrArray [target].SendMessage("Damage", damage);
 		}
 	}
 

@@ -16,7 +16,7 @@ public class Turn_Handler : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		script = GameObject.Find("PlayerArray").GetComponent<Player_Parent> ();
-		enemyscript =GameObject.Find("EnemyArray").GetComponent<Player_Parent> ();
+		enemyscript = GameObject.Find("EnemyArray").GetComponent<Player_Parent> ();
 	}
 
 	//Change turns from enemies to players and vice versa
