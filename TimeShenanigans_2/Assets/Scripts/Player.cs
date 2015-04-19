@@ -36,23 +36,6 @@ public class Player : Actor
 
 		turnScript = GameObject.Find ("TurnHandler").GetComponent<Turn_Handler>();
 
-		if(gameObject.tag == "Position1")
-		{
-			menu = GameObject.FindGameObjectWithTag("Menu1");
-		}
-		else if(gameObject.tag == "Position2")
-		{
-			menu = GameObject.FindGameObjectWithTag("Menu2");
-		}
-		else if(gameObject.tag == "Position3")
-		{
-			menu = GameObject.FindGameObjectWithTag("Menu3");
-		}
-		else if(gameObject.tag == "Position4")
-		{
-			menu = GameObject.FindGameObjectWithTag("Menu4");
-		}
-
 		//ene = enemyscript[playerPosition].GetComponent<Enemy> ();
 	}
 	

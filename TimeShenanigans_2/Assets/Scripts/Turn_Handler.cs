@@ -61,9 +61,14 @@ public class Turn_Handler : MonoBehaviour
 				if(position.turn)
 				{
 					position.turn = false;
-					
-					position = playersScript.plyrArray [i].GetComponent<Player>();
-					position.turn = true;
+
+					if(i+1 < playersScript.plyrArray.Length)
+					{
+						position = playersScript.plyrArray [i+1].GetComponent<Player>();
+						position.turn = true;
+					}
+					else
+						FlipTurn();
 					Debug.Log ("player " + i + "'s turn.");
 					return;
 				}
