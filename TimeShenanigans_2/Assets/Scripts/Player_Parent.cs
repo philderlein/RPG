@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class Player_Parent : MonoBehaviour {
+public class Player_Parent : MonoBehaviour 
+{
 
 
 	
@@ -22,15 +23,19 @@ public class Player_Parent : MonoBehaviour {
 	}
 
 	//deals damage to future selves
-	public void DealFutureDamage (int target, int damage) {
-		for (; target < plyrArray.Length; target++) {
-			plyrArray [target].BroadcastMessage("TakeDmg", damage);
+	public void DealFutureDamage (int target, int damage) 
+	{
+		for (; target < plyrArray.Length; target++) 
+		{
+			plyrArray [target].transform.GetChild(0).GetComponent<PlayerStats>().BroadcastMessage("TakeDmg", damage);
 		}
 	}
 
 	//Deals damage to past selves
-	public void DealPastDamage (int target, int damage) {
-		for (; target < plyrArray.Length; target++) {
+	public void DealPastDamage (int target, int damage) 
+	{
+		for (; target < plyrArray.Length; target++) 
+		{
 			plyrArray [target].BroadcastMessage("TakeDmg", damage);
 		}
 	}

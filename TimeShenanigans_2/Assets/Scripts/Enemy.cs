@@ -11,6 +11,8 @@ public class Enemy : Actor
 
 	public Slider healthSlider;
 
+	public Turn_Handler turnScript;
+
 	//public int spawnNum;
 	
 
@@ -19,24 +21,27 @@ public class Enemy : Actor
 	{
 		healthSlider.value = hp;
 		type = true;
+
+		turnScript = GameObject.Find ("TurnHandler").GetComponent<Turn_Handler>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if(turn)
+		/*if(turn)
 		{
 			//Attack the player on their screen.
-			Attack ();
-			turn = false;
-		}
+			//Attack ();
+			//turn = false;
+
+			turnScript.FlipTurn();
+		}*/
 	}
 
-	void Attack()
+	public void Attack()
 	{
 		//Attack the player that is on their target.
-		GameObject player = playerPosition.transform.GetChild(0).gameObject;
-		Player playerScript = player.GetComponent<Player>();
+		Player playerScript = playerPosition.GetComponent<Player>();
 		
 		playerScript.DamageType(10, type);
 	}

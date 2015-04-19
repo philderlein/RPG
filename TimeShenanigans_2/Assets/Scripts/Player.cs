@@ -70,6 +70,27 @@ public class Player : Actor
 	public void Warp()
 	{
 		//Do stuff
+		GameObject point1 = GameObject.FindGameObjectWithTag("Position1");
+		GameObject point2 = GameObject.FindGameObjectWithTag("Position2");
+		GameObject point3 = GameObject.FindGameObjectWithTag("Position3");
+		GameObject point4 = GameObject.FindGameObjectWithTag("Position4");
+
+		GameObject player1 = point1.transform.GetChild(0).gameObject;
+		GameObject player2 = point2.transform.GetChild(0).gameObject;
+		GameObject player3 = point3.transform.GetChild(0).gameObject;
+		GameObject player4 = point4.transform.GetChild(0).gameObject;
+
+		player1.transform.parent = point2.transform;
+		player1.transform.position = point2.transform.position;
+
+		player2.transform.parent = point3.transform;
+		player2.transform.position = point3.transform.position;
+
+		player3.transform.parent = point4.transform;
+		player3.transform.position = point4.transform.position;
+
+		player4.transform.parent = point1.transform;
+		player4.transform.position = point1.transform.position;
 	}
 	
 	void Update () 
@@ -77,8 +98,11 @@ public class Player : Actor
 		playerStats = gameObject.GetComponentInChildren<PlayerStats>();
 		
 		hp = playerStats.hp;
+		healthSlider.value = hp;
+
 		atk = playerStats.atk;
 		def = playerStats.def;
+		healval = playerStats.healVal;
 
 		if(turn)
 		{
@@ -93,9 +117,9 @@ public class Player : Actor
 	}
 
 	// Base damage function
-	public void TakeDmg(int amount)
+	/*public void TakeDmg(int amount)
 	{
 		hp -= amount;
 		healthSlider.value = hp;
-	}
+	}*/
 }

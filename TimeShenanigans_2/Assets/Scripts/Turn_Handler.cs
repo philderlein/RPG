@@ -50,6 +50,8 @@ public class Turn_Handler : MonoBehaviour
 
 		if(turns == Mode.Players)
 		{
+			Debug.Log ("Player Turn");
+
 			GameObject players = GameObject.Find ("PlayerArray");
 			Player_Parent playersScript = players.GetComponent<Player_Parent>();
 
@@ -69,6 +71,7 @@ public class Turn_Handler : MonoBehaviour
 					}
 					else
 						FlipTurn();
+
 					Debug.Log ("player " + i + "'s turn.");
 					return;
 				}
@@ -89,6 +92,8 @@ public class Turn_Handler : MonoBehaviour
 		}
 		else if(turns == Mode.Enemies)
 		{
+			Debug.Log ("Enemy Turn");
+
 			GameObject enemies = GameObject.Find("EnemyArray");
 			Player_Parent enemiesScript = enemies.GetComponent<Player_Parent>();
 
@@ -98,7 +103,15 @@ public class Turn_Handler : MonoBehaviour
 			{
 				position = enemiesScript.plyrArray[i].GetComponent<Enemy>();
 				position.turn = true;
+
+				if(position.turn)
+				{
+					position.Attack ();
+					position.turn = false;
+				}
 			}
+
+			FlipTurn ();
 		}
 
 		/*Player position;

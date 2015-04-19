@@ -3,15 +3,11 @@ using System.Collections;
 
 public class PlayerStats : MonoBehaviour 
 {
-	public int hp, atk, def;
+	public int hp, atk, def, healVal;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public void TakeDmg(int amount)
+	{
+		hp -= amount;
+		//healthSlider.value = hp;
 	}
 }
