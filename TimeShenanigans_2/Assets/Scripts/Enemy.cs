@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Enemy : Actor 
 {
@@ -8,24 +9,27 @@ public class Enemy : Actor
 
 	public GameObject playerPosition;
 
+	public Slider healthSlider;
+
 	//public int spawnNum;
 	
 
 	// Use this for initialization
 	void Start () 
 	{
+		healthSlider.value = hp;
 		type = true;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		/*if(enemyTurn)
+		if(turn)
 		{
 			//Attack the player on their screen.
 			Attack ();
-			//enemyTurn = false;
-		}*/
+			turn = false;
+		}
 	}
 
 	void Attack()
@@ -35,5 +39,11 @@ public class Enemy : Actor
 		Player playerScript = player.GetComponent<Player>();
 		
 		playerScript.DamageType(10, type);
+	}
+
+	public void TakeDmg(int amount)
+	{
+		hp -= amount;
+		healthSlider.value = hp;
 	}
 }

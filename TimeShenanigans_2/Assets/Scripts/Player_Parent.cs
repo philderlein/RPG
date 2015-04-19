@@ -5,8 +5,10 @@ public class Player_Parent : MonoBehaviour {
 
 	
 	public GameObject [] plyrArray;
+	public GameObject turnHandler;
+
 	public Turn_Handler script;
-	public Player position;
+	//public Player position;
 
 	//set playerPosition based on place in array
 	void Start(){
@@ -14,33 +16,38 @@ public class Player_Parent : MonoBehaviour {
 			Player position = plyrArray [i].GetComponent<Player>();
 			position.playerPosition = i;
 		}
+
+		turnHandler = GameObject.FindGameObjectWithTag("TurnHandler");
+		script = turnHandler.GetComponent<Turn_Handler>();
 	}
 
 	//deals damage to future selves
 	public void DealFutureDamage (int target, int damage) {
 		for (; target < plyrArray.Length; target++) {
-			plyrArray [target].BroadcastMessage("Damage", damage);
+			plyrArray [target].BroadcastMessage("TakeDmg", damage);
 		}
 	}
 
 	//Deals damage to past selves
 	public void DealPastDamage (int target, int damage) {
 		for (; target < plyrArray.Length; target++) {
-			plyrArray [target].BroadcastMessage("Damage", damage);
+			plyrArray [target].BroadcastMessage("TakeDmg", damage);
 		}
 	}
 
 
 	//Change turn to next player or start players' turns if the enemy just ended their turn
-	public void NextTurn (){
+	/*public void NextTurn (){
+
+		Player position;
 
 		//Iterate and essentially increment the turn
-		for (int i = 0; i < plyrArray.Length-1; i++) {
+		for (int i = 0; i < plyrArray.Length; i++) {
 			position = plyrArray [i].GetComponent<Player>();
 			if(position.turn){
 				position.turn = false;
 
-				position = plyrArray [i+1].GetComponent<Player>();
+				position = plyrArray [i].GetComponent<Player>();
 				position.turn = true;
 				Debug.Log ("player " + i + "'s turn.");
 				return;
@@ -49,7 +56,7 @@ public class Player_Parent : MonoBehaviour {
 		//If we get here, then we know the first 3 players' turns are false
 
 		//Check the last player's turn
-		position = plyrArray [plyrArray.Length].GetComponent<Player>();
+		position = plyrArray [plyrArray.Length-1].GetComponent<Player>();
 		if(position.turn){ //if the last player just did his turn
 			position.turn = false;
 			//Do enemy turns
@@ -59,11 +66,11 @@ public class Player_Parent : MonoBehaviour {
 			position = plyrArray [0].GetComponent<Player>();
 			position.turn = true;
 		}
-	}
-
-
-
-	/*void Update () {
-		//Do nothing
 	}*/
+
+
+
+	void Update () {
+		//Do nothing
+	}
 }

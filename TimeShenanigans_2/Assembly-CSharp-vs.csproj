@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\PlayerPosition.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Player_Parent.cs" />
+     <Compile Include="Assets\Scripts\ScreenFlashRed.cs" />
      <Compile Include="Assets\Scripts\TimeWarp.cs" />
      <Compile Include="Assets\Scripts\Turn_Handler.cs" />
  <Reference Include="UnityEngine.UI">

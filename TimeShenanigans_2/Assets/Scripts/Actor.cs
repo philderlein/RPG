@@ -1,13 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Actor : MonoBehaviour {
+public class Actor : MonoBehaviour 
+{
 
 
 	public int hp;
 	public int atk;
 	public int def;
 	public bool turn;
-	public enum Mode {
+
+	//public Slider healthSlider;
+
+	public enum Mode 
+	{
 		Dead   = 0, // Can not do shit
 		Alive  = 1, // Can do shit
 	}

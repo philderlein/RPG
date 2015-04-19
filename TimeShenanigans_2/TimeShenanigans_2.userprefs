@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player.cs" Line="11" Column="35" />
+      <File FileName="Assets\Scripts\Player.cs" Line="106" Column="1" />
+      <File FileName="Assets\Scripts\Enemy.cs" Line="37" Column="47" />
+      <File FileName="Assets\Scripts\Player_Parent.cs" Line="75" Column="3" />
+      <File FileName="Assets\Scripts\Turn_Handler.cs" Line="37" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
