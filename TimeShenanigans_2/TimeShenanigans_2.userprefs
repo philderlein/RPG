@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="F:\Topics In ATEC - Programming and Scripting\trostK_Project3\Assets\Scripts\GunShot.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Turn_Handler.cs">
     <Files>
-      <File FileName="F:\Topics In ATEC - Programming and Scripting\trostK_Project3\Assets\Scripts\GunShot.cs" Line="80" Column="5" />
+      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Turn_Handler.cs" Line="48" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

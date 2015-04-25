@@ -12,7 +12,7 @@ public class Turn_Handler : MonoBehaviour
 		Player4 = 4,
 		Enemies = 5*/
 
-		None = 0,
+		Setup = 0,
 		Players = 1,
 		Enemies = 2
 	}
@@ -31,14 +31,19 @@ public class Turn_Handler : MonoBehaviour
 	//Change turns from enemies to players and vice versa
 	public void FlipTurn ()
 	{
-		if (turns == Mode.Players) 
+		if(turns == Mode.Setup)
+		{
+			turns = Mode.Players;
+			NextTurn();
+		}
+		else if (turns == Mode.Players) 
 		{
 			turns = Mode.Enemies;
 			NextTurn();
 		}
-		else 
+		else if(turns == Mode.Enemies)
 		{
-			turns = Mode.Players;
+			turns = Mode.Setup;
 			NextTurn();
 		}
 	}
